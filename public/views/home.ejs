@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>home</title>
+    <link rel="stylesheet" href="./css/style.css">
+</head>
+<body>
+    <center>
+    <h1>ไผ่หวาน</h1>
+    <table>
+        <thead>
+            <tr>
+                <td>ลำดับ</td>
+                <td>ชื่อสินค้า</td>
+                <td>ราคา</td>
+                <td>ประเภท</td>
+            </tr>
+        </thead>
+        <tbody>
+            <%for(let i=0;i<product.length;i++){  %>
+                <tr>
+                <td><%= i+1 %></td>
+                <td><%= product[i].product_name %></td>
+                <td><%= product[i].product_price %></td>
+                <td><%= product[i].category.category_name %></td>
+            </tr>
+            <% } %>
+        </tbody>
+        <a href="/Category">จัดการประเภท</a>
+    </table>
+</center>
+</body>
+</html>

@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form action="/editCategory/<%= category.category_id %>" method="post">
+        <input placeholder="กรอกประเภท" type="text" name="category_name" id="" required
+        value="<%= category.category_name %>"/>
+        <input type="submit" value="เพิ่ม">
+    </form>
+    <a href="/Category">กลับ</a>
+</body>
+</html>
