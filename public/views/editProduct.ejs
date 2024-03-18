@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form action="/editProduct/<%= product.product_id %>" method="post">
+        <input placeholder="กรอกชื่อสินค้า" type="text" name="product_name" id="" required
+        value="<%= product.product_name %>"/>
+        <input placeholder="กรอกจำนวนสินค้า" type="text" name="product_price" id="" required
+        value="<%= product.product_price %>"/>
+        
+        <input type="submit" value="แก้ไข">
+    </form>
+    <a href="/">กลับ</a>
+</body>
+</html>

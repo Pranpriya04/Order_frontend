@@ -76,6 +76,30 @@ app.get("/deleteProduct/:product_id",async(req,res)=>{
     res.redirect("/");
 })
 
+app.get("/editProduct/:product_id",async(req,res)=>{
+    const response = await axios.get(base_url+"/products/"+req.params.product_id);
+    console.log(response.data);
+    res.render("editProduct",{
+        product: response.data,
+    });
+})
+
+
+app.post("/editProduct/:product_id",async(req,res)=>{
+    const response = await axios.put(base_url+"/products/"+req.params.product_id,req.body);
+    console.log(response.data);
+    res.redirect("/");
+})
+
+app.post("/createCategory",async(req,res)=>{
+    const response = await axios.post(base_url+"/products",req.body);
+    if (response.data.status == true) {
+        res.redirect("/")
+    }else{
+        res.redirect("/createCategory")
+    }
+})
+
 app.listen(port,()=>{
     console.log(`Frontend run port ${port}`);
 })
