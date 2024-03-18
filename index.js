@@ -71,6 +71,11 @@ app.get("/delCategory/:category_id",async(req,res)=>{
     res.redirect("/Category");
 })
 
+app.get("/deleteProduct/:product_id",async(req,res)=>{
+    const response = await axios.delete(base_url+"/products?product_id="+req.params.product_id);
+    res.redirect("/");
+})
+
 app.listen(port,()=>{
     console.log(`Frontend run port ${port}`);
 })

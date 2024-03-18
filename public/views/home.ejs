@@ -27,6 +27,8 @@
                 <td><%= product[i].product_price %></td>
                 <td><%= product[i].category.category_name %></td>
                 <td><%= product[i].status.status_name %></td>
+                <td><a href="/editProduct">แก้ไข</a></td>
+                <td><a href="/deleteProduct/<%= product[i].product_id%>">ลบ</a></td>
             </tr>
             <% } %>
         </tbody>
