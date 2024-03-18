@@ -16,6 +16,7 @@
                 <td>ชื่อสินค้า</td>
                 <td>ราคา</td>
                 <td>ประเภท</td>
+                <td>สถานะ</td>
             </tr>
         </thead>
         <tbody>
@@ -25,6 +26,7 @@
                 <td><%= product[i].product_name %></td>
                 <td><%= product[i].product_price %></td>
                 <td><%= product[i].category.category_name %></td>
+                <td><%= product[i].status.status_name %></td>
             </tr>
             <% } %>
         </tbody>

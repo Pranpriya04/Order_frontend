@@ -31,6 +31,13 @@ app.get("/Category",async(req,res)=>{
     });
 })
 
+app.get("/Statuses",async(req,res)=>{
+    const response = await axios.get(base_url+"/statuses");
+    res.render("Status",{
+        status: response.data, 
+    });
+})
+
 app.get("/createCategory",async(req,res)=>{
     res.render("createCategory");
 })
